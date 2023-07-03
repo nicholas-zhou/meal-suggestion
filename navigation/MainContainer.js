@@ -8,6 +8,7 @@ import HomeScreen from './screens/HomeScreen';
 import ScanScreen from './screens/ScanScreen';
 import GroceriesScreen from './screens/GroceriesScreen';
 import SettingsScreen from './screens/SettingsScreen';
+import Colors from '../utilities/Color';
 
 const homeName = 'Home';
 const scanName = 'Scan';
@@ -37,9 +38,9 @@ export default function MainContainer() {
 
                         return <Ionicons name={iconName} size={size} color={color}/>
                     },
-                    tabBarActiveTintColor: '#112A46',
-                    tabBarInactiveTintColor: '#ffffff',
-                    tabBarStyle: {padding: 10, height: 100, backgroundColor: '#f87c4c'},
+                    tabBarActiveTintColor: Colors.light.TERTIARY,
+                    tabBarInactiveTintColor: Colors.light.WHITE,
+                    tabBarStyle: {padding: 10, height: 100, backgroundColor: Colors.light.SECONDARY},
                     tabBarLabelStyle: {paddingBottom: 10, fontSize: 10},
                 })}>
 

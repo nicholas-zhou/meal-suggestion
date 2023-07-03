@@ -1,9 +1,12 @@
 import * as React from 'react';
-import { View, Text } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
+
+import Colors from '../../utilities/Color';
 
 export default function ScanScreen({navigation}) {
+    const styles = getStyles();
     return(
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <View style={styles.pageContainer}>
             <Text
                 onPress={() => navigation.navigate('Home')}
                 style={{ fontSize: 26, fontWeight: 'bold'}}>
@@ -12,3 +15,12 @@ export default function ScanScreen({navigation}) {
         </View>
     )
 }
+
+const getStyles = () => StyleSheet.create({
+    pageContainer: {
+        backgroundColor: Colors.light.PRIMARY,
+        flex: 1, 
+        alignItems: 'center', 
+        justifyContent: 'center',
+    }
+});
